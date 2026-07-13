@@ -1,6 +1,6 @@
 # Uncertainty-Guided Temporal Stabilization for Occlusion-Invariant IR-to-Pressure Mapping with Cross-Modal Retrieval
 
-![Figure 1 — Method overview](fig1.png)
+![Figure 1 — Method overview: online uncertainty-guided temporal stabilization (top) and offline training + cross-modal retrieval index (bottom)](fig1.png)
 
 Non-contact body **pressure-map estimation from thermal infrared (IR) images**, aimed at
 pressure-ulcer prevention in bedridden patients without contact pressure mats. The method
