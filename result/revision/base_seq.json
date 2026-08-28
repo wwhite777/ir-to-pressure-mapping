@@ -1,0 +1,5 @@
+{
+  "base_singlepass_seq_ssim": 0.7415415501364103,
+  "base_singlepass_seq_jitter": 0.02236373604585727,
+  "n_seq": 30
+}
