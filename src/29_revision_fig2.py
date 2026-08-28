@@ -12,7 +12,8 @@ Output: result/revision/fig2.png
 
 import sys
 import json
-sys.path.insert(0, '/home/wjeong/cc/test/revision')
+import os
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import importlib
 m = importlib.import_module('24_revision_temporal_calibration')
 

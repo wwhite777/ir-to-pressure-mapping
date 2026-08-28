@@ -2,7 +2,8 @@
 """Single-pass (no dropout) base model on the same 30 test sequences —
 completes the revised ablation table. Output: result/revision/base_seq.json"""
 import sys
-sys.path.insert(0, '/home/wjeong/cc/test/revision')
+import os
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import importlib
 m = importlib.import_module('24_revision_temporal_calibration')
 import numpy as np, torch, json, cv2
