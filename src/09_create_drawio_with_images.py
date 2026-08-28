@@ -11,7 +11,8 @@ import os
 from pathlib import Path
 from datetime import datetime
 
-PROJECT_ROOT = Path("/home/wjeong/cc")
+PROJECT_ROOT = Path(os.environ.get("CC_PROJECT_ROOT",
+                                   Path(__file__).resolve().parent.parent))
 FIGURE_DIR = PROJECT_ROOT / "result" / "figure"
 DRAWIO_DIR = FIGURE_DIR / "drawio"
 DRAWIO_DIR.mkdir(parents=True, exist_ok=True)

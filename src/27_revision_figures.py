@@ -11,13 +11,15 @@ EXACT data from the frozen result JSONs — nothing hand-entered.
 Output: result/revision/fig6.png (and copied next to the manuscript by the caller).
 """
 
+import os
 import json
 from pathlib import Path
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 
-RES = Path("/home/wjeong/cc/result/revision")
+RES = Path(os.environ.get("CC_PROJECT_ROOT",
+                          Path(__file__).resolve().parent.parent)) / "result" / "revision"
 temporal = json.load(open(RES / "temporal_revision.json"))
 retrieval = json.load(open(RES / "retrieval_revision.json"))
 

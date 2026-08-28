@@ -21,7 +21,8 @@ from matplotlib.patches import FancyBboxPatch
 import matplotlib.patches as mpatches
 
 # Paths
-PROJECT_ROOT = Path("/home/wjeong/cc")
+PROJECT_ROOT = Path(os.environ.get("CC_PROJECT_ROOT",
+                                   Path(__file__).resolve().parent.parent))
 RESULT_DIR = PROJECT_ROOT / "result"
 FIGURE_DIR = RESULT_DIR / "figure" / "consolidated"
 TABLE_DIR = RESULT_DIR / "report"

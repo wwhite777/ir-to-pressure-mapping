@@ -29,7 +29,8 @@ import cv2
 from skimage.metrics import structural_similarity as ssim
 
 # Paths
-PROJECT_ROOT = Path("/home/wjeong/cc")
+PROJECT_ROOT = Path(os.environ.get("CC_PROJECT_ROOT",
+                                   Path(__file__).resolve().parent.parent))
 DATA_ROOT = PROJECT_ROOT / "data"
 MODEL_DIR = PROJECT_ROOT / "models"
 RESULT_DIR = PROJECT_ROOT / "result" / "figure" / "exp2_uncertainty_ema"

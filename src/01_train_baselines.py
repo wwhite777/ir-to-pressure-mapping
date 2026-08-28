@@ -29,7 +29,8 @@ import segmentation_models_pytorch as smp
 from tqdm.auto import tqdm
 
 # Paths
-PROJECT_ROOT = Path("/home/wjeong/cc")
+PROJECT_ROOT = Path(os.environ.get("CC_PROJECT_ROOT",
+                                   Path(__file__).resolve().parent.parent))
 DATA_ROOT = PROJECT_ROOT / "data"
 MODEL_DIR = PROJECT_ROOT / "models"
 RESULT_DIR = PROJECT_ROOT / "result" / "figure" / "exp1_baselines"
